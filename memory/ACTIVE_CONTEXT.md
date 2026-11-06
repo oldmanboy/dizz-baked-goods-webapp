@@ -1,20 +1,22 @@
 # Active Context & Working State
 
 ## Current Focus
-- **Milestone**: Phase 1 (MVP) — Milestone 1 Initialization & Scaffold
-- **Status**: Git repository initialized, complete folder scaffold established, AI Governance and Memory architecture established, pushing initial commit to GitHub (`oldmanboy/dizz-baked-goods-webapp`).
+- **Milestone**: Phase 1 (MVP) — Milestone 1 & 2 Execution
+- **Status**: `/grill-me` interview successfully completed across all 9 architectural branches. All design decisions codified into `ADR-005`. Ready to implement the clarified features into the codebase.
 
-## Recent Key Decisions & Events
-- Initialized monorepo with `frontend/` (React 19 + Vite) and `backend/` (Express + TypeScript + Zod).
-- Established `ai-governance/` with formal AI Constitution, Security Policy, Agent Roles, Compliance Standards, and Change Control.
-- Established `memory/` with ADRs, system patterns, product knowledge, and roadmap tracker.
-- Synced strategic documents `implementation_plan.md` and `future_roadmap.md` into `docs/`.
+## Key Design Decisions Agreed via /grill-me
+1. **QRIS Demo Mode**: Auto-fallback to verified test QRIS with warning banner if `.env` payload is missing.
+2. **Unique Code Allocation**: 2-digit codes (`+01` to `+99`) with 30-minute auto-expiry TTL.
+3. **Confirmation UX**: Web confirmation card with live status + 1-tap "Send Order to Baker on WhatsApp" (`wa.me`).
+4. **Excel Structure**: Master rolling `orders.xlsx` with auto-filters on both sheets (`Paid Orders` and `Bake Prep Line Items`).
+5. **Stock Quota**: Hybrid model (optional `stockQuota` per bread; otherwise open until cutoff timestamp).
+6. **Delivery Pricing**: Configurable flat-rate delivery fee added to checkout total and QRIS for courier delivery.
+7. **Order Tracking**: Header modal for tracking orders by Order Code (`DBG-YYYYMMDD-XXXX`).
+8. **Receipt Security**: Protected route (`/api/v1/orders/:token/receipt`) requiring order token.
+9. **Testing Depth**: Vitest unit & integration suite for QRIS math, formula defense, mutex concurrency, and API routes.
 
-## Immediate Next Steps (Milestone 1 & 2 Execution)
-1. Complete core backend implementations:
-   - `backend/src/services/qrisService.ts`: EMVCo TLV parsing, Tag 01 mutation, Tag 54 injection, CRC-16 calculation.
-   - `backend/src/services/storageService.ts`: Mutex-locked ExcelJS multi-sheet workbook + append-only CSV backup fulfilling `IOrderRepository`.
-   - `backend/src/services/uniqueCodeService.ts`: Scoped 2-digit unique code allocation with 30-min TTL.
-   - `backend/src/services/receiptService.ts`: Binary magic-byte inspection + Sharp WebP transcoding.
-2. Build unit tests in `backend/tests/` verifying QRIS mutation and spreadsheet formula injection sanitization.
-3. Scaffold storefront and checkout UI in `frontend/src/`.
+## Immediate Next Actions
+- Update `catalog.json` with delivery flat fee configuration (`deliveryFee: 25000`) and optional `stockQuota`.
+- Update backend services (`catalogService`, `orderRoutes`, `storageService`) to incorporate delivery fee, order tracking endpoint, and protected receipt download.
+- Wire frontend Header "Track My Order" modal and WhatsApp button in `OrderPaymentPage`.
+- Commit and push changes to GitHub (`oldmanboy/dizz-baked-goods-webapp`).
