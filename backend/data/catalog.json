@@ -1,0 +1,109 @@
+{
+  "activeBatch": {
+    "batchId": "BATCH-202611-01",
+    "title": "Weekend Sourdough & Brioche Pre-Order",
+    "description": "Slow-fermented artisan sourdough and enriched brioche baked fresh this weekend. Orders close Thursday at 21:00 WIB.",
+    "orderCutoff": "2026-11-12T21:00:00+07:00",
+    "fulfillmentDates": [
+      {
+        "date": "2026-11-14",
+        "label": "Saturday, Nov 14",
+        "availableFulfillments": ["pickup", "delivery"]
+      },
+      {
+        "date": "2026-11-15",
+        "label": "Sunday, Nov 15",
+        "availableFulfillments": ["pickup", "delivery"]
+      }
+    ],
+    "fulfillmentDetails": {
+      "pickup": {
+        "location": "Dizz Baked Goods Studio, Kebayoran Baru, Jakarta Selatan",
+        "timeWindow": "09:00 - 13:00 WIB"
+      },
+      "delivery": {
+        "provider": "Self-arranged or courier pickup (GoSend / GrabExpress Instant/Same-Day)",
+        "timeWindow": "Dispatched starting 10:00 WIB"
+      }
+    }
+  },
+  "categories": [
+    { "id": "sourdough", "name": "Artisan Sourdough" },
+    { "id": "brioche", "name": "Brioche & Soft Buns" },
+    { "id": "pastry", "name": "Sweet Bakes & Pastries" }
+  ],
+  "products": [
+    {
+      "id": "country-sourdough",
+      "name": "Country Sourdough Loaf",
+      "category": "sourdough",
+      "price": 85000,
+      "description": "Signature 36-hour slow-fermented artisan loaf with blistered caramelized crust, open creamy crumb, and mild yogurt tang.",
+      "image": "/images/breads/country-sourdough.jpg",
+      "allergens": ["Gluten"],
+      "weightGrams": 750,
+      "maxPerOrder": 4,
+      "available": true
+    },
+    {
+      "id": "seed-grain-sourdough",
+      "name": "Toasted Seed & Multi-Grain Sourdough",
+      "category": "sourdough",
+      "price": 95000,
+      "description": "Hearty whole-wheat sourdough packed with toasted pumpkin seeds, flax, sunflower kernels, and white sesame.",
+      "image": "/images/breads/seed-grain-sourdough.jpg",
+      "allergens": ["Gluten", "Sesame"],
+      "weightGrams": 800,
+      "maxPerOrder": 4,
+      "available": true
+    },
+    {
+      "id": "cranberry-cream-cheese-brioche",
+      "name": "Cranberry Cream Cheese Brioche",
+      "category": "brioche",
+      "price": 65000,
+      "description": "Ultra-fluffy French butter brioche folded with tart dried cranberries and velvety Philadelphia cream cheese.",
+      "image": "/images/breads/cranberry-cream-cheese-brioche.jpg",
+      "allergens": ["Gluten", "Dairy", "Eggs"],
+      "weightGrams": 380,
+      "maxPerOrder": 6,
+      "available": true
+    },
+    {
+      "id": "garlic-butter-salt-bread",
+      "name": "Garlic Butter Salt Bread (Shio Pan)",
+      "category": "brioche",
+      "price": 45000,
+      "description": "Crispy salted crust baked with French butter rolled inside, finished with roasted garlic honey glaze and Maldon sea salt. (2 pcs)",
+      "image": "/images/breads/garlic-butter-salt-bread.jpg",
+      "allergens": ["Gluten", "Dairy"],
+      "weightGrams": 220,
+      "maxPerOrder": 6,
+      "available": true
+    },
+    {
+      "id": "dark-chocolate-babka",
+      "name": "Dark Chocolate & Hazelnut Babka",
+      "category": "pastry",
+      "price": 90000,
+      "description": "Swirled enriched brioche loaf braided with 70% Valrhona dark chocolate fudge, toasted crushed hazelnuts, and orange sugar syrup.",
+      "image": "/images/breads/dark-chocolate-babka.jpg",
+      "allergens": ["Gluten", "Dairy", "Eggs", "Tree Nuts"],
+      "weightGrams": 550,
+      "maxPerOrder": 4,
+      "available": true
+    },
+    {
+      "id": "cinnamon-morning-roll",
+      "name": "Cardamom Cinnamon Morning Bun",
+      "category": "pastry",
+      "price": 40000,
+      "description": "Flaky laminated sweet bun tossed in fresh cracked green cardamom, Ceylon cinnamon, and dark brown sugar crystals. (2 pcs)",
+      "image": "/images/breads/cinnamon-morning-roll.jpg",
+      "allergens": ["Gluten", "Dairy"],
+      "weightGrams": 240,
+      "maxPerOrder": 6,
+      "available": true
+    }
+  ]
+}

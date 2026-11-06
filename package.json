@@ -1,0 +1,29 @@
+{
+  "name": "dizz-baked-goods-webapp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pre-Order bakery catalog, Static-to-Dynamic QRIS payment engine, and order management webapp for Dizz Baked Goods.",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=backend & npm run dev --workspace=frontend",
+    "dev:backend": "npm run dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=backend && npm run build --workspace=frontend",
+    "test": "npm run test --workspace=backend",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "keywords": [
+    "bakery",
+    "qris",
+    "emvco",
+    "pre-order",
+    "react",
+    "express",
+    "typescript"
+  ],
+  "author": "Dizz Baked Goods",
+  "license": "UNLICENSED"
+}
